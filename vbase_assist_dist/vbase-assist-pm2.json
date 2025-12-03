@@ -1,0 +1,15 @@
+{
+  "apps": [{
+      "name": "vbase-assist",
+      "cwd": ".",
+      "script": "/usr/bin/java",
+      "args": [
+          "-jar",
+          "-Dspring.profiles.active=prod",
+          "vbase-assist.jar"
+      ],
+      "log_date_format":"YYYY-MM-DD HH:mm Z",
+      "exec_interpreter": "none",
+      "exec_mode": "fork"
+  }]
+}
