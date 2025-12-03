@@ -26,7 +26,7 @@ export default {
   },
   //监听路由检查登录
   watch:{
-    "$route" : 'checkLogin'
+    // "$route" : 'checkLogin'
   },
   mounted(){
     //组件开始挂载时获取用户信息
