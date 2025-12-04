@@ -22,13 +22,13 @@
      <el-button v-if="catalogId === null" icon="el-icon-plus" size="mini" style="margin-right: 1rem;" :disabled="gbChannels.length === 0 || multipleSelection.length === 0" @click="batchAdd">批量添加</el-button>
     </div>
 
-    <el-table ref="gbChannelsTable" :data="gbChannels" border style="width: 100%" :height="winHeight" :row-key="(row)=> row.deviceId + row.channelId" @selection-change="handleSelectionChange">
-        <el-table-column align="center" type="selection" :reserve-selection="true" width="55">
-        </el-table-column>
-        <el-table-column prop="channelId" label="通道编号" width="180" align="center">
-        </el-table-column>
-        <el-table-column prop="name" label="通道名称" show-overflow-tooltip align="center">
-        </el-table-column>
+    <el-table ref="gbChannelsTable" :data="gbChannels" border style="width: 100%; table-layout: fixed;" :height="winHeight" :row-key="(row)=> row.deviceId + row.channelId" @selection-change="handleSelectionChange">
+         <el-table-column align="center" type="selection" :reserve-selection="true" width="55">
+         </el-table-column>
+         <el-table-column prop="channelId" label="通道编号" width="180" align="center">
+         </el-table-column>
+         <el-table-column prop="name" label="通道名称" show-overflow-tooltip align="center" width="150">
+         </el-table-column>
         <el-table-column prop="deviceId" label="设备编号" width="180" align="center">
         </el-table-column>
         <el-table-column label="设备地址" width="180" align="center">
@@ -38,8 +38,8 @@
                 </div>
             </template>
         </el-table-column>
-        <el-table-column prop="manufacturer" label="厂家" align="center">
-        </el-table-column>
+        <el-table-column prop="manufacturer" label="厂家" align="center" width="120">
+</el-table-column>
         <el-table-column label="操作" width="100" align="center" fixed="right">
           <template slot-scope="scope">
             <el-button-group>

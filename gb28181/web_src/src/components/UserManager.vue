@@ -12,11 +12,11 @@
       </div>
     </div>
     <!--用户列表-->
-    <el-table :data="userList" style="width: 100%;font-size: 12px;" :height="winHeight"
+    <el-table :data="userList" style="width: 100%;font-size: 12px;table-layout: fixed;" :height="winHeight"
               header-row-class-name="table-header">
-      <el-table-column prop="username" label="用户名" min-width="160"/>
-      <el-table-column prop="pushKey" label="pushkey" min-width="160"/>
-      <el-table-column prop="role.name" label="类型" min-width="160"/>
+      <el-table-column prop="username" label="用户名" width="160"/>
+      <el-table-column prop="pushKey" label="pushkey" width="160"/>
+      <el-table-column prop="role.name" label="类型" width="160"/>
       <el-table-column label="操作" width="300" fixed="right">
         <template slot-scope="scope">
           <el-button size="medium" icon="el-icon-edit" type="text" @click="edit(scope.row)">修改密码</el-button>

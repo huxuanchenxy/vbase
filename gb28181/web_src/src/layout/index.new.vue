@@ -3,12 +3,14 @@
     <el-header>
       <ui-header-2/>
     </el-header>
-    <el-main>
-      <el-container>
+    <el-main style="padding: 0 !important; overflow: hidden;">
+      <el-container style="height: 100%;">
         <aside-menu></aside-menu>
-        <transition name="fade">
-          <router-view></router-view>
-        </transition>
+        <div style="padding-left: 124px; height: 100%;">
+          <transition name="fade">
+            <router-view></router-view>
+          </transition>
+        </div>
       </el-container>
     </el-main>
   </el-container>
@@ -43,7 +45,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color:white;
+  color:#333333;
 }
 
 .page-title {

@@ -9,11 +9,11 @@
       </div>
     </div>
     <devicePlayer ref="devicePlayer"></devicePlayer>
-    <el-table :data="streamProxyList" style="width: 100%" :height="winHeight">
-      <el-table-column prop="name" label="名称" min-width="120" show-overflow-tooltip/>
-      <el-table-column prop="app" label="流应用名" min-width="120" show-overflow-tooltip/>
-      <el-table-column prop="stream" label="流ID" min-width="120" show-overflow-tooltip/>
-      <el-table-column label="流地址" min-width="400"  show-overflow-tooltip >
+    <el-table :data="streamProxyList" style="width: 100%; table-layout: fixed;" :height="winHeight">
+      <el-table-column prop="name" label="名称" width="120" show-overflow-tooltip/>
+      <el-table-column prop="app" label="流应用名" width="120" show-overflow-tooltip/>
+      <el-table-column prop="stream" label="流ID" width="120" show-overflow-tooltip/>
+      <el-table-column label="流地址" width="400"  show-overflow-tooltip >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
 
@@ -28,7 +28,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="mediaServerId" label="流媒体" min-width="180" ></el-table-column>
+      <el-table-column prop="mediaServerId" label="流媒体" width="150" ></el-table-column>
       <el-table-column label="类型" width="100" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
@@ -37,8 +37,8 @@
         </template>
       </el-table-column>
 
-      <el-table-column prop="gbId" label="国标编码" min-width="180"  show-overflow-tooltip/>
-      <el-table-column label="状态" min-width="120" >
+      <el-table-column prop="gbId" label="国标编码" width="180"  show-overflow-tooltip/>
+      <el-table-column label="状态" width="120" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium" v-if="scope.row.status">在线</el-tag>
@@ -46,7 +46,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column label="启用" min-width="120" >
+      <el-table-column label="启用" width="120" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium" v-if="scope.row.enable">已启用</el-tag>
@@ -54,8 +54,8 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="createTime" label="创建时间"  min-width="150" show-overflow-tooltip/>
-      <el-table-column label="转HLS" min-width="120" >
+      <el-table-column prop="createTime" label="创建时间"  width="150" show-overflow-tooltip/>
+      <el-table-column label="转HLS" width="120" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium" v-if="scope.row.enable_hls">已启用</el-tag>

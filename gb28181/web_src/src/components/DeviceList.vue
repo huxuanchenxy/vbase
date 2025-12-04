@@ -10,12 +10,12 @@
       </div>
     </div>
     <!--设备列表-->
-    <el-table :data="deviceList" style="width: 100%;font-size: 12px;" :height="winHeight" header-row-class-name="table-header">
-      <el-table-column prop="name" label="名称" min-width="160">
+    <el-table :data="deviceList" style="width: 100%;font-size: 12px;table-layout: fixed;" :height="winHeight" header-row-class-name="table-header">
+      <el-table-column prop="name" label="名称" width="160">
       </el-table-column>
-      <el-table-column prop="deviceId" label="设备编号" min-width="200" >
+      <el-table-column prop="deviceId" label="设备编号" width="200" >
       </el-table-column>
-      <el-table-column label="地址" min-width="160" >
+      <el-table-column label="地址" width="160" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag v-if="scope.row.hostAddress" size="medium">{{ scope.row.hostAddress }}</el-tag>
@@ -23,9 +23,9 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="manufacturer" label="厂家" min-width="120" >
+      <el-table-column prop="manufacturer" label="厂家" width="120" >
       </el-table-column>
-      <el-table-column label="流传输模式"  min-width="160" >
+      <el-table-column label="流传输模式"  width="160" >
         <template slot-scope="scope">
           <el-select size="mini" @change="transportChange(scope.row)" v-model="scope.row.streamMode" placeholder="请选择" style="width: 120px">
             <el-option key="UDP" label="UDP" value="UDP"></el-option>
@@ -34,9 +34,9 @@
           </el-select>
         </template>
       </el-table-column>
-      <el-table-column prop="channelCount" label="通道数" min-width="120" >
+      <el-table-column prop="channelCount" label="通道数" width="120" >
       </el-table-column>
-      <el-table-column label="状态" min-width="120">
+      <el-table-column label="状态" width="120">
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium" v-if="scope.row.online == 1">在线</el-tag>
@@ -44,16 +44,16 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="keepaliveTime" label="最近心跳" min-width="160" >
+      <el-table-column prop="keepaliveTime" label="最近心跳" width="160" >
       </el-table-column>
-      <el-table-column prop="registerTime" label="最近注册"  min-width="160">
+      <el-table-column prop="registerTime" label="最近注册"  width="160">
       </el-table-column>
 <!--      <el-table-column prop="updateTime" label="更新时间"  width="140">-->
 <!--      </el-table-column>-->
 <!--      <el-table-column prop="createTime" label="创建时间"  width="140">-->
 <!--      </el-table-column>-->
 
-      <el-table-column label="操作" min-width="300" fixed="right">
+      <el-table-column label="操作" width="300" fixed="right">
         <template slot-scope="scope">
           <el-button type="text" size="medium" v-bind:disabled="scope.row.online==0" icon="el-icon-refresh" @click="refDevice(scope.row)"
                      @mouseover="getTooltipContent(scope.row.deviceId)">刷新
@@ -299,7 +299,7 @@ export default {
 
 <style>
 #deviceList{
-  padding-left: 124px;
+  padding: 15px;
   overflow: hidden;
 }
 .videoList {

@@ -38,14 +38,14 @@
       <DeviceTree ref="deviceTree" :device="device" :onlyCatalog="true" :clickEvent="treeNodeClickEvent" ></DeviceTree>
     </el-aside>
     <el-main style="padding: 5px;">
-      <el-table ref="channelListTable" :data="deviceChannelList" :height="winHeight" style="width: 100%" header-row-class-name="table-header">
-        <el-table-column prop="channelId" label="通道编号" min-width="195">
+      <el-table ref="channelListTable" :data="deviceChannelList" :height="winHeight" style="width: 100%; table-layout: fixed;" header-row-class-name="table-header">
+        <el-table-column prop="channelId" label="通道编号" width="195">
         </el-table-column>
-        <el-table-column prop="deviceId" label="设备编号" min-width="195">
+        <el-table-column prop="deviceId" label="设备编号" width="195">
         </el-table-column>
-        <el-table-column prop="name" label="通道名称" min-width="195">
+        <el-table-column prop="name" label="通道名称" width="195">
         </el-table-column>
-        <el-table-column label="快照" min-width="120">
+        <el-table-column label="快照" width="120">
           <template v-slot:default="scope">
             <el-image
               :src="getSnap(scope.row)"
@@ -59,24 +59,24 @@
             </el-image>
           </template>
         </el-table-column>
-        <el-table-column prop="subCount" label="子节点数" min-width="110">
+        <el-table-column prop="subCount" label="子节点数" width="110">
         </el-table-column>
-        <el-table-column prop="manufacture" label="厂家" min-width="120">
+        <el-table-column prop="manufacture" label="厂家" width="120">
         </el-table-column>
-        <el-table-column label="位置信息"  min-width="180">
+        <el-table-column label="位置信息"  width="180">
           <template slot-scope="scope">
             <span v-if="scope.row.longitude*scope.row.latitude > 0">{{ scope.row.longitude }},<br>{{ scope.row.latitude }}</span>
             <span v-if="scope.row.longitude*scope.row.latitude === 0">无</span>
           </template>
         </el-table-column>
-        <el-table-column prop="ptztypeText" label="云台类型" min-width="110"/>
-        <el-table-column label="开启音频" min-width="110">
+        <el-table-column prop="ptztypeText" label="云台类型" width="110"/>
+        <el-table-column label="开启音频" width="110">
           <template slot-scope="scope">
             <el-switch @change="updateChannel(scope.row)" v-model="scope.row.hasAudio" active-color="#409EFF">
             </el-switch>
           </template>
         </el-table-column>
-        <el-table-column label="状态" min-width="110">
+        <el-table-column label="状态" width="110">
           <template slot-scope="scope">
             <div slot="reference" class="name-wrapper">
               <el-tag size="medium" v-if="scope.row.status === 1">在线</el-tag>
@@ -86,7 +86,7 @@
         </el-table-column>
 
 
-        <el-table-column label="操作" min-width="280" fixed="right">
+        <el-table-column label="操作" width="280" fixed="right">
           <template slot-scope="scope">
             <el-button size="medium" v-bind:disabled="device == null || device.online === 0" icon="el-icon-video-play" type="text" @click="sendDevicePush(scope.row)">播放</el-button>
             <el-button size="medium" v-bind:disabled="device == null || device.online === 0" icon="el-icon-switch-button" type="text"  style="color: #f56c6c" v-if="!!scope.row.streamId"

@@ -25,17 +25,17 @@
       <el-button v-if="catalogId !== null" icon="el-icon-delete" size="mini" style="margin-right: 1rem;" :disabled="gbStreams.length === 0 || multipleSelection.length === 0" type="danger" @click="batchDel">批量移除</el-button>
       <el-button v-if="catalogId === null" icon="el-icon-plus" size="mini" style="margin-right: 1rem;" :disabled="gbStreams.length === 0 || multipleSelection.length === 0" @click="batchAdd">批量添加</el-button>
     </div>
-    <el-table ref="gbStreamsTable" :data="gbStreams" border style="width: 100%" :height="winHeight" :row-key="(row)=> row.app + row.stream" @selection-change="handleSelectionChange">
-        <el-table-column align="center" type="selection" :reserve-selection="true" width="55">
-        </el-table-column>
-        <el-table-column prop="name" label="名称" show-overflow-tooltip align="center">
-        </el-table-column>
-        <el-table-column prop="app" label="应用名" show-overflow-tooltip align="center">
-        </el-table-column>
-        <el-table-column prop="stream" label="流ID"  show-overflow-tooltip align="center">
-        </el-table-column>
-        <el-table-column prop="gbId" label="国标编码" show-overflow-tooltip align="center">
-        </el-table-column>
+    <el-table ref="gbStreamsTable" :data="gbStreams" border style="width: 100%; table-layout: fixed;" :height="winHeight" :row-key="(row)=> row.app + row.stream" @selection-change="handleSelectionChange">
+         <el-table-column align="center" type="selection" :reserve-selection="true" width="55">
+         </el-table-column>
+         <el-table-column prop="name" label="名称" show-overflow-tooltip align="center" width="120">
+         </el-table-column>
+         <el-table-column prop="app" label="应用名" show-overflow-tooltip align="center" width="100">
+         </el-table-column>
+         <el-table-column prop="stream" label="流ID"  show-overflow-tooltip align="center" width="100">
+         </el-table-column>
+         <el-table-column prop="gbId" label="国标编码" show-overflow-tooltip align="center" width="180">
+         </el-table-column>
         <el-table-column label="流来源" width="100" align="center">
             <template slot-scope="scope">
             <div slot="reference" class="name-wrapper">

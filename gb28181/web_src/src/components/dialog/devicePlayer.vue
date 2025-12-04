@@ -172,13 +172,13 @@
                     </div>
 
 
-                    <el-table :data="videoHistory.searchHistoryResult" height="150" v-loading="recordsLoading">
-                        <el-table-column label="名称" prop="name"></el-table-column>
-                        <el-table-column label="文件" prop="filePath"></el-table-column>
-                        <el-table-column label="开始时间" prop="startTime" :formatter="timeFormatter"></el-table-column>
-                        <el-table-column label="结束时间" prop="endTime" :formatter="timeFormatter"></el-table-column>
+                    <el-table :data="videoHistory.searchHistoryResult" height="150" v-loading="recordsLoading" style="table-layout: fixed;">
+                        <el-table-column label="名称" prop="name" width="120"></el-table-column>
+                        <el-table-column label="文件" prop="filePath" width="300"></el-table-column>
+                        <el-table-column label="开始时间" prop="startTime" :formatter="timeFormatter" width="180"></el-table-column>
+                        <el-table-column label="结束时间" prop="endTime" :formatter="timeFormatter" width="180"></el-table-column>
 
-                        <el-table-column label="操作">
+                        <el-table-column label="操作" width="100">
                             <template slot-scope="scope">
                                 <el-button-group>
                                     <el-button icon="el-icon-video-play" size="mini" @click="playRecord(scope.row)">播放</el-button>

@@ -41,39 +41,39 @@
     </div>
     <devicePlayer ref="devicePlayer"></devicePlayer>
     <addStreamTOGB ref="addStreamTOGB"></addStreamTOGB>
-    <el-table ref="pushListTable" :data="pushList" style="width: 100%" :height="winHeight"
+    <el-table ref="pushListTable" :data="pushList" style="width: 100%; table-layout: fixed;" :height="winHeight"
               @selection-change="handleSelectionChange" :row-key="(row)=> row.app + row.stream">
-      <el-table-column  type="selection" :reserve-selection="true" min-width="55">
+      <el-table-column  type="selection" :reserve-selection="true" width="55">
       </el-table-column>
-      <el-table-column prop="name" label="名称" min-width="200">
+      <el-table-column prop="name" label="名称" width="150">
       </el-table-column>
-      <el-table-column prop="app" label="APP" min-width="200">
+      <el-table-column prop="app" label="APP" width="120">
       </el-table-column>
-      <el-table-column prop="stream" label="流ID" min-width="200">
+      <el-table-column prop="stream" label="流ID" width="120">
       </el-table-column>
-      <el-table-column prop="gbId" label="国标编码" min-width="200" >
+      <el-table-column prop="gbId" label="国标编码" width="180" >
       </el-table-column>
-      <el-table-column prop="mediaServerId" label="流媒体" min-width="200" >
+      <el-table-column prop="mediaServerId" label="流媒体" width="150" >
       </el-table-column>
-      <el-table-column label="开始时间"  min-width="200">
+      <el-table-column label="开始时间"  width="180">
         <template slot-scope="scope">
           <el-button-group>
             {{ scope.row.pushTime == null? "-":scope.row.pushTime }}
           </el-button-group>
         </template>
       </el-table-column>
-      <el-table-column label="正在推流"  min-width="100">
+      <el-table-column label="正在推流"  width="100">
         <template slot-scope="scope">
           {{scope.row.pushIng ? '是' : '否' }}
         </template>
       </el-table-column>
-      <el-table-column label="本平台推流"  min-width="100">
+      <el-table-column label="本平台推流"  width="100">
         <template slot-scope="scope">
           {{scope.row.pushIng && !!scope.row.self ? '是' : '否' }}
         </template>
       </el-table-column>
 
-      <el-table-column label="操作" min-width="360"  fixed="right">
+      <el-table-column label="操作" width="360"  fixed="right">
         <template slot-scope="scope">
           <el-button size="medium" icon="el-icon-video-play"
                      v-if="scope.row.pushIng === true"

@@ -22,14 +22,14 @@
     <div v-if="!recordDetail">
 
       <!--设备列表-->
-      <el-table :data="recordList" style="width: 100%" :height="winHeight">
-        <el-table-column prop="app" label="应用名" >
-        </el-table-column>
-        <el-table-column prop="stream" label="流ID" >
-        </el-table-column>
-        <el-table-column prop="time" label="时间" >
-        </el-table-column>
-        <el-table-column label="操作" width="360"  fixed="right">
+      <el-table :data="recordList" style="width: 100%; table-layout: fixed;" :height="winHeight">
+         <el-table-column prop="app" label="应用名" width="150">
+         </el-table-column>
+         <el-table-column prop="stream" label="流ID" width="150">
+         </el-table-column>
+         <el-table-column prop="time" label="时间" width="200">
+         </el-table-column>
+         <el-table-column label="操作" width="360"  fixed="right">
           <template slot-scope="scope">
             <el-button size="medium" icon="el-icon-folder-opened" type="text" @click="showRecordDetail(scope.row)">查看</el-button>
             <!--                  <el-button size="mini" icon="el-icon-delete" type="danger"  @click="deleteRecord(scope.row)">删除</el-button>-->

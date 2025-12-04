@@ -1,7 +1,7 @@
 <template>
   <div id="AsideMenu">
 
-    <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#313238" text-color="#fff"
+    <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#ffffff" text-color="#333"
              active-text-color="#1890ff" mode="horizontal">
 
       <el-menu-item index="/console">系统监控</el-menu-item>
@@ -121,16 +121,19 @@ export default {
   width:124px;
   height: 100%;
   position:fixed;
-  background: #313238;
+  background: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+  z-index: 5;
+  overflow: hidden;
 }
 #AsideMenu .el-menu-item{
   width: 100%;
 }
 #AsideMenu .el-switch__label {
-  color: white ;
+  color: #333 ;
 }
 .el-menu--popup .el-menu-item .el-switch .el-switch__label {
-  color: white !important;
+  color: #333 !important;
 }
 #AsideMenu .el-switch__label.is-active{
   color: #409EFF;

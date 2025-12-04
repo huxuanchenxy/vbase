@@ -1,7 +1,7 @@
 <template>
   <div id="UiHeader">
 
-    <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#001529" text-color="#fff"
+    <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#ffffff" text-color="#333"
              active-text-color="#1890ff" mode="horizontal">
 
       <el-menu-item index="/console">系统监控</el-menu-item>
@@ -151,10 +151,10 @@ export default {
 </script>
 <style>
 #UiHeader .el-switch__label {
-  color: white ;
+  color: #333 ;
 }
 .el-menu--popup .el-menu-item .el-switch .el-switch__label {
-  color: white !important;
+  color: #333 !important;
 }
 #UiHeader .el-switch__label.is-active{
   color: #409EFF;

@@ -59,12 +59,12 @@
         <div class="control-cell" id="MonitorServer">
           <div
             style="width:100%; height:100%; background:#313238;color:white;border-radius:4px;box-shadow:0px 0px 3px grey">
-            <el-table :data="serverList" style="width: 100%;font-size: 12px;">
-              <el-table-column prop="ip" label="IP" min-width="100">
+            <el-table :data="serverList" style="width: 100%;font-size: 12px; table-layout: fixed;">
+              <el-table-column prop="ip" label="IP" width="120">
               </el-table-column>
-              <el-table-column prop="type" label="服务器类型" min-width="120">
+              <el-table-column prop="type" label="服务器类型" width="120">
               </el-table-column>
-              <el-table-column prop="opsLink" label="运维信息" min-width="100">
+              <el-table-column prop="opsLink" label="运维信息" width="120">
                 <template v-slot:default="scope">
                   <el-button size="mini" style="margin-right: 1rem;" type="primary"
                     @click="openOpsLink(scope.row.opsLink)">

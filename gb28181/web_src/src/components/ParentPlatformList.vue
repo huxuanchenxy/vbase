@@ -9,10 +9,10 @@
     </div>
 
     <!--设备列表-->
-    <el-table :data="platformList" style="width: 100%" :height="winHeight">
-      <el-table-column prop="name" label="名称" ></el-table-column>
-      <el-table-column prop="serverGBId" label="平台编号" min-width="200"></el-table-column>
-      <el-table-column label="是否启用" min-width="80" >
+    <el-table :data="platformList" style="width: 100%; table-layout: fixed;" :height="winHeight">
+      <el-table-column prop="name" label="名称" width="120"></el-table-column>
+      <el-table-column prop="serverGBId" label="平台编号" width="200"></el-table-column>
+      <el-table-column label="是否启用" width="100" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium" v-if="scope.row.enable">已启用</el-tag>
@@ -20,7 +20,7 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column label="状态" min-width="80" >
+      <el-table-column label="状态" width="100" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium" v-if="scope.row.status">在线</el-tag>
@@ -28,16 +28,16 @@
           </div>
         </template>
       </el-table-column>
-      <el-table-column label="地址" min-width="160" >
+      <el-table-column label="地址" width="160" >
         <template slot-scope="scope">
           <div slot="reference" class="name-wrapper">
             <el-tag size="medium">{{ scope.row.serverIP}}:{{scope.row.serverPort }}</el-tag>
           </div>
         </template>
       </el-table-column>
-      <el-table-column prop="deviceGBId" label="设备国标编号" min-width="200" ></el-table-column>
-      <el-table-column prop="transport" label="信令传输模式" min-width="120" ></el-table-column>
-      <el-table-column prop="channelCount" label="通道数" min-width="120" ></el-table-column>
+      <el-table-column prop="deviceGBId" label="设备国标编号" width="200" ></el-table-column>
+      <el-table-column prop="transport" label="信令传输模式" width="120" ></el-table-column>
+      <el-table-column prop="channelCount" label="通道数" width="100" ></el-table-column>
       <el-table-column label="订阅信息" width="120"  fixed="right">
         <template slot-scope="scope">
           <i v-if="scope.row.alarmSubscribe" style="font-size: 20px" title="报警订阅" class="iconfont icon-gbaojings subscribe-on " ></i>

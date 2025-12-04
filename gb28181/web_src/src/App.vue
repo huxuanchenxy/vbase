@@ -65,21 +65,27 @@ html,
 body,
 #app {
   margin: 0 0;
-  /* background-color: #e9eef3; */
+  background-color: #e9eef3;
   height: 100%;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
 }
-.el-header,
-.el-footer {
-  /* background-color: #b3c0d1; */
+.el-header {
+  background-color: #ffffff;
   color: #333;
   text-align: center;
   line-height: 60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 .el-main {
-  background-color: #222327;
+  background-color: #ffffff;
   color: #333;
   text-align: center;
   padding-top: 0px !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* margin: 15px; */
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
@@ -102,37 +108,37 @@ body,
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
 }
 .table-header {
-  color: #727272;
+  color: #333333;
   font-weight: 600;
 }
 
 /*全局table*/
 div.el-table tr,div.el-table th.el-table__cell,div.el-table, .el-table__expanded-cell{
-  background-color: #222327;
-  color:white;
+  background-color: #ffffff;
+  color:#333333;
 }
 .el-table tr.el-table__row.hover-row>td.el-table__cell{
-  background-color: #313238;
+  background-color: #f5f7fa;
 }
 .el-pagination__total{
-  color:white;
+  color:#333333;
 }
 
 
 /*全局弹窗*/
 .el-dialog{
-  background-color: #313238;
-  color:white;
+  background-color: #ffffff;
+  color:#333333;
 }
 
 .el-dialog__title,.el-form-item__label{
-  color:white;
+  color:#333333;
 }
 .el-input__inner{
-  color:#222327;
+  color:#333333;
 }
 .el-input.is-disabled .el-input__inner{
-  color:#777;
+  color:#909399;
 }
 
 </style>
