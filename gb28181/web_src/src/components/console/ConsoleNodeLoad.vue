@@ -22,7 +22,7 @@ export default {
           'gbSend': '国标推流',
         },
         label:{
-          color:"#ffffff"
+          color:"#303133"
         },
       },
       extend: {
@@ -32,14 +32,14 @@ export default {
           left: "center",
           top: 20,
           textStyle:{
-            color:'#ffffff'
+            color:'#303133'
           }
         },
         legend: {
           left: "center",
           bottom: "15px",
           textStyle:{
-            color:'#ffffff'
+            color:'#303133'
           }
         },
         label: {
@@ -47,7 +47,7 @@ export default {
           position: "top"
         },
         textStyle:{
-          color:'#ffffff'
+          color:'#303133'
         }
       }
     };

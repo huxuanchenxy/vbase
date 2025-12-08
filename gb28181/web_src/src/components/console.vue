@@ -18,7 +18,7 @@
       <el-col :xl="{ span: 24 }" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <div class="control-cell" id="WorkThreadsLoad">
           <div
-            style="width:100%; height:100%; background:#313238;color:white;border-radius:4px;box-shadow:0px 0px 3px grey">
+            style="width:100%; height:100%; background:#f5f7fa;color:#303133;border-radius:4px;box-shadow:0px 0px 3px #e4e7ed">
             <consoleResource ref="consoleResource"></consoleResource>
           </div>
         </div>
@@ -41,7 +41,7 @@
       <el-col :xl="{ span: 24 }" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <div class="control-cell" id="WorkThreadsLoad">
           <div
-            style="width:100%; height:100%; background:#313238;color:white;border-radius:4px;box-shadow:0px 0px 3px grey">
+            style="width:100%; height:100%; background:#f5f7fa;color:#303133;border-radius:4px;box-shadow:0px 0px 3px #e4e7ed">
             <consoleNodeLoad ref="consoleNodeLoad"></consoleNodeLoad>
           </div>
         </div>
@@ -58,7 +58,7 @@
       <el-col :xl="{ span: 24 }" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <div class="control-cell" id="MonitorServer">
           <div
-            style="width:100%; height:100%; background:#313238;color:white;border-radius:4px;box-shadow:0px 0px 3px grey">
+            style="width:100%; height:100%; background:#f5f7fa;color:#303133;border-radius:4px;box-shadow:0px 0px 3px #e4e7ed">
             <el-table :data="serverList" style="width: 100%;font-size: 12px; table-layout: fixed;">
               <el-table-column prop="ip" label="IP" width="120">
               </el-table-column>
@@ -229,15 +229,16 @@ export default {
 }
 
 .el-table tr {
-  background: #313238;
-  color: white;
+  background: #ffffff;
+  color: #303133;
 }
 
 .el-table th.el-table__cell {
-  background-color: #313238;
+  background-color: #f5f7fa;
+  color: #606266;
 }
 
 .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell {
-  background-color: #222327;
+  background-color: #ecf5ff;
 }
 </style>
