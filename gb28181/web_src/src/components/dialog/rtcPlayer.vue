@@ -104,7 +104,7 @@ export default {
     #webRtcPlayerBox{
         width: 100%;
         max-height: 56vh;
-        background-color: #000;
+        background-color: #f5f7fa;
     }
     /* 隐藏logo */
     /* .iconqingxiLOGO {

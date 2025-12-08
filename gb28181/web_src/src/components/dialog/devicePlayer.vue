@@ -1038,15 +1038,15 @@ export default {
   color:#303133;
 }
 .el-tabs__item{
-  color:white;
+  color:#303133;
 }
 .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell{
-  background-color: #313238;
+  background-color: #ecf5ff;
 }
 
 .el-dialog{
-  background-color: #313238;
-  color:white;
+  background-color: #ffffff;
+  color:#303133;
 }
 
 </style>
