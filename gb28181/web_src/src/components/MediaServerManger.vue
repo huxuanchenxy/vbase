@@ -191,4 +191,8 @@
   .el-col-6 {
   width: auto !important; /* 覆盖默认的宽度设置 */
 }
+  .el-col {
+  width: auto !important; /* 覆盖默认的宽度设置 */
+}
+
 </style>
