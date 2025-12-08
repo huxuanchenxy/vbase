@@ -145,7 +145,7 @@
                 <!--{"code":0,"data":{"paths":["22-29-30.mp4"],"rootPath":"/home/kkkkk/Documents/ZLMediaKit/release/linux/Debug/www/record/hls/kkkkk/2020-05-11/"}}-->
                 <el-tab-pane label="录像查询" name="record" v-if="tabActiveName === 'record'" v-loading="isLoging">
                     <div style="width: 100%;">
-                      <div style="width: 100%; text-align: left;color:white;">
+                      <div style="width: 100%; text-align: left;color:#303133;">
                         <span>录像控制</span>
                         <el-button-group style="margin-left: 1rem;">
                           <el-button size="mini" class="iconfont icon-zanting" title="暂停" @click="gbPause()"></el-button>
@@ -166,7 +166,7 @@
                         <el-date-picker style="float: right;" size="mini" v-model="videoHistory.date" type="date" value-format="yyyy-MM-dd" placeholder="日期" @change="queryRecords()"></el-date-picker>
                       </div>
                       <div style="width: 100%; text-align: left">
-                        <span class="demonstration" style="padding: 12px 36px 12px 0;float: left;color:white;">{{showTimeText}}</span>
+                        <span class="demonstration" style="padding: 12px 36px 12px 0;float: left;color:#303133;">{{showTimeText}}</span>
                         <el-slider style="width: 80%; float:left;" v-model="sliderTime" @change="gbSeek" :show-tooltip="false"></el-slider>
                       </div>
                     </div>
@@ -1035,7 +1035,7 @@ export default {
     padding: 0 10%;
 }
 .el-dialog__body{
-  color:white;
+  color:#303133;
 }
 .el-tabs__item{
   color:white;

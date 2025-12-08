@@ -313,7 +313,8 @@ export default {
   width: 15rem;
   height: 10rem;
   margin-right: 1rem;
-  background-color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #dcdfe6;
 }
 
 .video-item-img {
@@ -341,17 +342,18 @@ export default {
   height: 3rem;
   background-image: url("../assets/loading.png");
   background-size: cover;
-  background-color: #000000;
+  background-color: #f5f7fa;
 }
 
 .video-item-title {
   position: absolute;
   bottom: 0;
-  color: #000000;
-  background-color: #ffffff;
+  color: #303133;
+  background-color: #f5f7fa;
   line-height: 1.5rem;
   padding: 0.3rem;
   width: 14.4rem;
+  border-top: 1px solid #dcdfe6;
 }
 
 </style>
