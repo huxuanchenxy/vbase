@@ -8,7 +8,7 @@
 
         <el-form ref="platform1" label-width="160px">
           <el-row :gutter="24">
-            <el-col :span="8">
+            <el-col :span="20">
                 <el-form-item label="本机IP">
                   <el-input v-model="config.ip"></el-input>
                 </el-form-item>
