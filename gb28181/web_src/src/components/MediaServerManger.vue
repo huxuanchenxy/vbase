@@ -151,18 +151,18 @@
     position: relative;
     margin-bottom: 20px;
   }
-  .card-img-zlm{
-    width: 100%; height: 200px;
-    line-height: 200px;
-    /* background: url('~@static/images/logo.png') no-repeat center; */
-    background-color: #313238;
-    color:white;
-    font-size: 40px;
-    vertical-align:middle;
-    background-position: center;
-    background-size: contain;
-    margin: 0 auto;
-  }
+.card-img-zlm {
+  width: 100%; 
+  height: 200px; 
+  line-height: 200px;
+  background-color: #f5f7fa;
+  color: #303133;
+  font-size: 40px;
+  vertical-align: middle;
+  background-position: center;
+  background-size: cover; 
+  margin: 0 auto;
+}
   
   .server-card-status-online{
     position: absolute;
@@ -182,10 +182,13 @@
     position: absolute;
     left: 20px;
     top: 20px;
-    color: white;
+    color: #303133;
     font-size: 18px;
   }
 	.server-card:hover {
     border: 1px solid #adadad;
   }
+  .el-col-6 {
+  width: auto !important; /* 覆盖默认的宽度设置 */
+}
 </style>
