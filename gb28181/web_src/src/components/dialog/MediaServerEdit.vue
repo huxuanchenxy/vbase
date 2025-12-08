@@ -379,6 +379,6 @@ export default {
 </script>
 <style>
 .el-dialog__title, .el-form-item__label {
-  color:white;
+  color:#303133;
 }
 </style>
