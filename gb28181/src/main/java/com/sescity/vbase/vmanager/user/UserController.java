@@ -57,10 +57,13 @@ public class UserController {
       try {
         String response =
             OauthUtils.doLogin(
-                oauthConfig.getOauthServer(), new LoginEntity("admin", "abc123", code));
+                //oauthConfig.getOauthServer(), new LoginEntity("admin", "abc123", code));
+                oauthConfig.getOauthServer(), new LoginEntity(oauthConfig.getAdminUsername(), oauthConfig.getAdminPassword(), code),
+                        oauthConfig);
         if (response == null) {
           throw new ControllerException(ErrorCode.ERROR100.getCode(), "远程认证调用失败。");
         }
+        
         JSONObject jsonObject = JSON.parseObject(response);
         if (jsonObject.containsKey("code")
             && Integer.parseInt(jsonObject.getString("code")) != 200) {

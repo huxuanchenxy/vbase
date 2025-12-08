@@ -52,7 +52,7 @@ axios.interceptors.response.use(function (response) {
   // 对响应错误做点什么
   if (error.response.status === 401) {
     console.log("Received 401 Response")
-    // router.push('/login');
+    router.push('/login');
   }
 
   if (error.response.status === 500) {
