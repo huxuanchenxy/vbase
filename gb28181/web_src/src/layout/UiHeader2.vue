@@ -1,7 +1,7 @@
 <template>
   <div id="UiHeader2">
 
-    <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#313238" text-color="#fff"
+    <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#f5f7fa" text-color="#303133"
              active-text-color="#1890ff" mode="horizontal">
       <div class="main_title">社会联网子系统 v1.0</div>
 
@@ -137,19 +137,19 @@ export default {
   display: inline-block;
   float: left;
   text-indent: 20px;
-  color: white;
+  color: #303133;
   font-weight: bold;
   letter-spacing: 1px;
   font-size: larger;
 }
 .el-menu.el-menu--horizontal{
-  border-bottom: none;
+  border-bottom: 1px solid #e4e7ed;
 }
 #UiHeader2 .el-switch__label {
-  color: white ;
+  color: #606266 ;
 }
 .el-menu--popup .el-menu-item .el-switch .el-switch__label {
-  color: white !important;
+  color: #606266 !important;
 }
 #UiHeader2 .el-switch__label.is-active{
   color: #409EFF;
