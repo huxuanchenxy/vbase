@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/debug': {
-        target: 'https://10.89.34.9:18080',//'https://123.60.149.38:18080',
+        target: 'https://127.0.0.1:18080',//'https://123.60.149.38:18080',
         changeOrigin: true,
         secure: false,
         pathRewrite: {
@@ -20,7 +20,7 @@ module.exports = {
         }
       },
       '/static/snap': {
-        target: 'https://10.89.34.9:18080',//'https://123.60.149.38:18080',
+        target: 'https://127.0.0.1:18080',//'https://123.60.149.38:18080',
         changeOrigin: true,
         secure: false
         // pathRewrite: {
