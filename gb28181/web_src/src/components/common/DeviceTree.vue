@@ -1,10 +1,10 @@
 <template>
-  <div id="DeviceTree" style="width: 100%;height: 100%; background-color: #222327; overflow: auto">
+  <div id="DeviceTree" style="width: 100%;height: 100%; background-color: #f5f7fa; overflow: auto">
     <el-container>
-      <el-header style='color:white;'>设备列表</el-header>
-      <el-main style="background-color: #222327;">
+      <el-header style='color:#303133;'>设备列表</el-header>
+      <el-main style="background-color: #f5f7fa;">
         <div class="device-tree-main-box">
-          <el-tree ref="gdTree" :props="defaultProps" :load="loadNode" lazy @node-click="handleNodeClick"@node-contextmenu="handleContextMenu" node-key="id" style="min-width: 100%; display:inline-block !important;background:#222327;">
+          <el-tree ref="gdTree" :props="defaultProps" :load="loadNode" lazy @node-click="handleNodeClick"@node-contextmenu="handleContextMenu" node-key="id" style="min-width: 100%; display:inline-block !important;background:#f5f7fa;">
             <span class="custom-tree-node" slot-scope="{ node, data }" style="width: 100%">
               <span v-if="node.data.type === 0 && node.data.online" title="在线设备" class="device-online iconfont icon-jiedianleizhukongzhongxin2"></span>
               <span v-if="node.data.type === 0 && !node.data.online " title="离线设备" class="device-offline iconfont icon-jiedianleizhukongzhongxin2"></span>
@@ -181,14 +181,14 @@ export default {
   text-align: left;
 }
 .device-online{
-  color: #ffffff;
+  color: #303133;
   font-size: 0.85rem;
 }
 .device-offline{
-  color: #727272;
+  color: #909399;
   font-size: 0.85rem;
 }
 .el-tree-node__content:hover, .el-upload-list__item:hover,.el-tree-node:focus>.el-tree-node__content{
-  background-color: #313238;
+  background-color: #ecf5ff;
 }
 </style>
