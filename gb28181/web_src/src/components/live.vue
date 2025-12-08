@@ -12,7 +12,7 @@
           <i class="el-icon-s-grid btn" :class="{active:spilt==9}" @click="spilt=9"/>
         </el-header>
         <el-main style="padding: 0;background-color: #f5f7fa;">
-          <div style="width: 99%;height: 85vh;display: flex;flex-wrap: wrap;background-color: #f0f2f5;">
+          <div style="width: 73vw;height: 85vh;display: flex;flex-wrap: wrap;background-color: #f0f2f5;">
             <div v-for="i in spilt" :key="i" class="play-box"
                  :style="liveStyle" :class="{redborder:playerIdx == (i-1)}"
                  @click="playerIdx = (i-1)">
