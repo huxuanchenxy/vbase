@@ -58,7 +58,7 @@ public class UserController {
         String response =
             OauthUtils.doLogin(
                 //oauthConfig.getOauthServer(), new LoginEntity("admin", "abc123", code));
-                oauthConfig.getOauthServer(), new LoginEntity(oauthConfig.getAdminUsername(), oauthConfig.getAdminPassword(), code),
+                oauthConfig.getOauthServer(), null,
                         oauthConfig);
         if (response == null) {
           throw new ControllerException(ErrorCode.ERROR100.getCode(), "远程认证调用失败。");
