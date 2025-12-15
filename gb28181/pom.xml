@@ -13,7 +13,7 @@
 	<artifactId>vbase</artifactId>
 	<version>1.0.0</version>
 	<name>vbase</name>
-	<description>社会联网子系统</description>
+	<description>视频基座</description>
 
 	<repositories>
 		<repository>

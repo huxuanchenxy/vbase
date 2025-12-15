@@ -3,7 +3,7 @@
     <div class="limiter">
       <div class="container-login100">
         <div class="wrap-login100">
-          <span class="login100-form-title p-b-26">社会联网子系统</span>
+          <span class="login100-form-title p-b-26">视频基座</span>
 
           <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
             <input :class="'input100 ' + (username == '' ? '' : 'has-val')" type="text" v-model="username" name="username"

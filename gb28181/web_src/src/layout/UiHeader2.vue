@@ -3,7 +3,7 @@
 
     <el-menu router :default-active="activeIndex" menu-trigger="click" background-color="#f5f7fa" text-color="#303133"
              active-text-color="#1890ff" mode="horizontal">
-      <div class="main_title">社会联网子系统 v1.0</div>
+      <div class="main_title">视频基座 v1.0</div>
 
       <el-submenu index="" style="float: right;">
         <template slot="title">欢迎，{{ this.$cookies.get("session").username }}</template>

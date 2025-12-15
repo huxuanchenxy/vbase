@@ -27,7 +27,7 @@ public class SpringDocConfig {
         return new OpenAPI()
                 .info(new Info().title("Vbase 接口文档")
                         .contact(contact)
-                        .description("社会联网子系统")
+                        .description("视频基座")
                         .version("v2.0")
                         .license(new License().name("Apache 2.0").url("http://springdoc.org")));
     }
